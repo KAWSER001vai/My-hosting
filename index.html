@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAWSER cPanel - Web & Bot Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-server brand-icon"></i>
+                <h2>KAWSER <span>cPanel</span></h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-folder-open"></i> File Manager</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-robot"></i> Bot Hosting</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-globe"></i> Web Hosting</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-terminal"></i> Terminal</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <div class="server-status-badge">
+                <span class="status-dot online"></span> Server Online
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-bar">
+                <div class="header-title">
+                    <h1>Server Control Center</h1>
+                    <p>Manage your Python bots, scripts & websites effortlessly</p>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Upload Script / App
+                </button>
+            </header>
+
+            <!-- Server Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-header">
+                        <span>CPU USAGE</span>
+                        <i class="fa-solid fa-microchip icon"></i>
+                    </div>
+                    <div class="card-value" id="cpu-val">12%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill cpu-fill" style="width: 12%;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="card-header">
+                        <span>RAM USAGE</span>
+                        <i class="fa-solid fa-memory icon"></i>
+                    </div>
+                    <div class="card-value" id="ram-val">34%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill ram-fill" style="width: 34%;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="card-header">
+                        <span>ACTIVE PROCESSES</span>
+                        <i class="fa-solid fa-cubes icon"></i>
+                    </div>
+                    <div class="card-value" id="process-val">3</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill process-fill" style="width: 25%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools & Features Section -->
+            <section class="section">
+                <h3 class="section-title">Tools & Features</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon blue"><i class="fa-solid fa-folder-tree"></i></div>
+                        <div class="tool-info">
+                            <h4>File Manager</h4>
+                            <p>Upload, edit & delete project files</p>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon purple"><i class="fa-solid fa-list-check"></i></div>
+                        <div class="tool-info">
+                            <h4>Process Manager</h4>
+                            <p>Monitor & stop background tasks</p>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon green"><i class="fa-solid fa-code"></i></div>
+                        <div class="tool-info">
+                            <h4>Web Terminal</h4>
+                            <p>Execute shell commands directly</p>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon orange"><i class="fa-solid fa-box-open"></i></div>
+                        <div class="tool-info">
+                            <h4>Auto Pip Installer</h4>
+                            <p>Manage Python dependencies easily</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hosted Applications & Bots -->
+            <section class="section">
+                <h3 class="section-title">Hosted Applications & Bots</h3>
+                <div class="table-container">
+                    <table class="app-table">
+                        <thead>
+                            <tr>
+                                <th>Application Name</th>
+                                <th>Status</th>
+                                <th>Type</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="app-name">
+                                        <i class="fa-brands fa-telegram text-blue"></i>
+                                        <strong>Trading_Prediction_Bot.py</strong>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-success">Running</span></td>
+                                <td>Telegram Bot</td>
+                                <td>
+                                    <button class="btn-icon text-amber" title="Restart"><i class="fa-solid fa-rotate-right"></i></button>
+                                    <button class="btn-icon text-red" title="Stop"><i class="fa-solid fa-circle-stop"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="app-name">
+                                        <i class="fa-solid fa-globe text-purple"></i>
+                                        <strong>Dashboard_Web_App</strong>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-danger">Stopped</span></td>
+                                <td>Web App</td>
+                                <td>
+                                    <button class="btn-icon text-green" title="Start"><i class="fa-solid fa-play"></i></button>
+                                    <button class="btn-icon text-red" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
